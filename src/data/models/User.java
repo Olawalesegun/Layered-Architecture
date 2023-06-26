@@ -1,2 +1,4 @@
-package data.models;public class User {
+package data.models;
+
+public class User {
 }
