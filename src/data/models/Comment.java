@@ -4,6 +4,9 @@ import java.time.LocalDateTime;
 
 public class Comment {
     private int id;
+    private String comment;
+    private int UserId;
+    private LocalDateTime dateOfComment;
 
     public int getId() {
         return id;
@@ -37,7 +40,5 @@ public class Comment {
         this.dateOfComment = dateOfComment;
     }
 
-    private String comment;
-    private int UserId;
-    private LocalDateTime dateOfComment;
+
 }
