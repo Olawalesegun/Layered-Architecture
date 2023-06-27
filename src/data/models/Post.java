@@ -5,6 +5,10 @@ import java.time.LocalDateTime;
 public class Post {
     private int id;
     private String title;
+    private String body;
+    private LocalDateTime dateCreated;
+    private int userId;
+
 
     public int getId() {
         return id;
@@ -45,8 +49,5 @@ public class Post {
     public void setUserId(int userId) {
         this.userId = userId;
     }
-
-    private String body;
-    private LocalDateTime dateCreated;
-    private int userId;
 }
+
