@@ -1,2 +1,4 @@
-package services;public class PostService {
+package services;
+
+public class PostService {
 }
