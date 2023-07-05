@@ -8,27 +8,24 @@ import java.util.List;
 public class UserRepositoryImpl implements UserRepository{
 
     List<User> userList = new ArrayList();
-    private long count;
     @Override
     public User save(User user) {
         userList.add(user);
-        count++;
+        user.setId(generateId());
         return user;
     }
 
     @Override
     public User findById(int id) {
         for(User user: userList){
-            if(id == user.getId())
+            if(user.getId() == id)
                 return user;
-            else{
-                return null;
-            }
         }
         return null;
     }
-    public int generateID(){
-        return userList.size();
+    public void update(User user){
+       int index = userList.indexOf(user);
+       userList.set(index, user);
     }
 
     @Override
@@ -45,9 +42,9 @@ public class UserRepositoryImpl implements UserRepository{
     }
     @Override
     public long count() {
-        return count;
+        return userList.size();
     }
     public int generateId(){
-        return userList.size();
+       return userList.size();
     }
 }
