@@ -42,4 +42,14 @@ class UserRepositoryImplTest {
         userRepository.save(user);
         assertEquals(user, userRepository.findById(1));
     }
+    @Test
+    public void saveTwo_updateOne_countIsTwoTest(){
+        User user2 = new User();
+        user.setUserName("Dallas");
+        user2.setUserName("SiliconValley");
+        userRepository.save(user);
+        userRepository.save(user2);
+        userRepository.update(user);
+        assertEquals(2,userRepository.count());
+    }
 }
