@@ -7,4 +7,6 @@ public interface UserRepository {
     void delete(int id);
     void deleteAll();
     long count();
+
+    void update(User user);
 }
